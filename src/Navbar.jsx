@@ -49,10 +49,3 @@ const Navbar = () => {
 
 export default Navbar;
 
-// <BrowserRouter>
-//   <Navbar/>
-//   <Routes>
-//     <Route path="/" element={<HomePage/>}/> 
-//     <Route path="/newblog" element={<NewBlog/>}/>
-//   </Routes>
-// </BrowserRouter>

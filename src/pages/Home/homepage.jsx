@@ -1,3 +1,4 @@
+
 import HeroSection from "../../components/Home/HeroSection"
 import RecentBlogs from "../../components/Home/Recentblogs"
 
@@ -6,6 +7,7 @@ const HomePage = () => {
         <>
             <HeroSection/>
             <RecentBlogs/>
+             
         </>
      );
 }
