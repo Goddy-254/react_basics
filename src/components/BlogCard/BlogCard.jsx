@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 const BlogCard = ({blogs, title}) => {
 
     return ( 
@@ -32,9 +33,9 @@ const BlogCard = ({blogs, title}) => {
                   <div className="text-muted">
                     {blog.blogcontent.substring(0, 30)}
                   </div>
-                  <button className="btn btn-outline-primary btn-sm me-3">
-                    Read More
-                  </button>
+                  <Link className="btn btn-outline-primary btn-sm me-3" to ={`/article/${blog.id}`}>
+                    Read More..
+                  </Link>
                   <button className="btn btn-outline-danger btn-sm">
                     Delete
                   </button>
@@ -52,4 +53,4 @@ const BlogCard = ({blogs, title}) => {
      );
 }
  
-export default BlogCard;
+export default BlogCard
