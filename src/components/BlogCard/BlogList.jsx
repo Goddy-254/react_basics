@@ -8,7 +8,7 @@ const BlogList = ({blogs,title}) => {
                 return (
                     <div className="card m-2 p-2" key={blog.id}>{index + 1} . {blog.blogTitle } 
                     <p > {blog.blogcontent?.substring(0,100)}...</p>
-                    <button className="btn btn-outline-primary">Read More</button>
+                    <Link to={`/article/${blog.id}`} className="btn btn-outline-primary">Read More</Link>
                     </div>
                 )
             })

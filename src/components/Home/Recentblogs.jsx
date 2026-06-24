@@ -16,7 +16,7 @@ const RecentBlogs = () => {
           <BlogCard blogs={blogs} title={"Recent Blogs"}/>
         </div>
         <div className="col-md-4">
-          <BlogList blogs = {blogs.filter((blog) => blog.blogCategory === "Trending")} title = {"Trending Blogs"} />
+          <BlogList blogs = {blogs} title = {"Trending Blogs"} />
         </div>
       </div>
     </div>

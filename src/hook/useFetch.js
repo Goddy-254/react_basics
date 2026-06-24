@@ -11,7 +11,7 @@ const useFetch = (url) => {
       fetch(url)
         .then((response) => {
           if (!response.ok) {
-            Error.throw("cannot fetch data");
+            throw new Error("cannot fetch data");
           }
           return response.json(); //parsing
         })
@@ -24,7 +24,6 @@ const useFetch = (url) => {
           setLoader(false);
         });
     }, 2000);
-    console.log("use effect ran!!");
   }, [url]);
 
   return {allData,loading,error}

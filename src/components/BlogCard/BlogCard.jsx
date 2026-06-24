@@ -5,7 +5,7 @@ const BlogCard = ({blogs, title}) => {
         <div>
           <h5>{title}</h5>
         {
-        blogs.map((blog) => {
+        blogs && blogs.map((blog) => {
           return (
             <div className="card shadow-lg my-2" key={blog.id}>
               <div className="row">
@@ -31,14 +31,12 @@ const BlogCard = ({blogs, title}) => {
                     {blog.blogAuthor}
                   </div>
                   <div className="text-muted">
-                    {blog.blogcontent.substring(0, 30)}
+                    {blog.blogcontent?.substring(0, 50)}
                   </div>
                   <Link className="btn btn-outline-primary btn-sm me-3" to ={`/article/${blog.id}`}>
                     Read More..
                   </Link>
-                  <button className="btn btn-outline-danger btn-sm">
-                    Delete
-                  </button>
+                 
 
                 </div>
 
