@@ -21,7 +21,7 @@ jobs:
         with:
           node-version: 24
 
-      - run: npm ci
+      - run: npm install
       - run: npm run build
 
       - uses: actions/upload-pages-artifact@v3
@@ -31,7 +31,13 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+
+    permissions:
+      pages: write
+      id-token: write
+
     environment:
       name: github-pages
+
     steps:
       - uses: actions/deploy-pages@v4
